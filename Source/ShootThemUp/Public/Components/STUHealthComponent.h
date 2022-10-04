@@ -50,7 +50,7 @@ class SHOOTTHEMUP_API USTUHealthComponent : public UActorComponent
     virtual void BeginPlay() override;
 
   private:
-    float Health = 0.0f;
+    float Health = 50.0f;
     FTimerHandle HealTimerHandle;
 
     UFUNCTION()

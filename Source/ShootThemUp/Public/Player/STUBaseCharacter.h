@@ -10,6 +10,7 @@ class UCameraComponent;
 class USTUHealthComponent;
 class USpringArmComponent;
 class UTextRenderComponent;
+class USTUWeaponComponent;
 
 UCLASS()
 class SHOOTTHEMUP_API ASTUBaseCharacter : public ACharacter
@@ -20,8 +21,7 @@ class SHOOTTHEMUP_API ASTUBaseCharacter : public ACharacter
     ASTUBaseCharacter(const FObjectInitializer &ObjInit);
 
   protected:
-
-    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Instanced, Category = "Components")
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
     USTUHealthComponent *HealthComponent;
 
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
@@ -32,6 +32,9 @@ class SHOOTTHEMUP_API ASTUBaseCharacter : public ACharacter
 
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
     UTextRenderComponent *HealthTextComponent;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
+    USTUWeaponComponent *WeaponComponent;
 
     UPROPERTY(EditDefaultsOnly, Category = "Animation")
     UAnimMontage *DeathAnimMontage;
